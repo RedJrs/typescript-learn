@@ -23,7 +23,7 @@ class ScorePanel {
     //设置一个加分的方法
     addScore() {
         // 使分数自增
-        this.scoreEle.innerHTML = ++this.score + '';
+        this.scoreEle.innerHTML = `${++this.score}`;
         // 判断分数是多少
         if (this.score % this.upScore === 0) {
             this.levelUp();
@@ -33,7 +33,7 @@ class ScorePanel {
     // 提升等级的方法
     levelUp() {
         if (this.level < this.maxLevel) {
-            this.levelEle.innerHTML = ++this.level + '';
+            this.levelEle.innerHTML = `${++this.level}`;
         }
     }
 }

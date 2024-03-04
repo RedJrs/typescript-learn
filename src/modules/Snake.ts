@@ -8,6 +8,7 @@ class Snake {
 
     constructor() {
         this.element = document.getElementById('snake')!;
+        // querySelector取一个元素所以是第一个
         this.head = document.querySelector('#snake > div') as HTMLElement;
         this.bodies = this.element.getElementsByTagName('div');
     }
@@ -36,6 +37,7 @@ class Snake {
         }
 
         // 修改x时，是在修改水平坐标，蛇在左右移动，蛇在向左移动时，不能向右掉头，反之亦然
+        // (第一个元素的值和第二个不能相等)
         if (this.bodies[1] && (this.bodies[1] as HTMLElement).offsetLeft === value) {
             // console.log('水平方向发生了掉头');
             // 如果发生了掉头，让蛇向反方向继续移动

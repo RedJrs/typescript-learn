@@ -45,6 +45,7 @@ class GameControl {
         // 需要检查event.key的值是否合法（用户是否按了正确的按键）
         // 修改direction属性
         this.direction = event.key;
+        
     }
 
     // 创建一个控制蛇移动的方法
